@@ -1,0 +1,62 @@
+    package principal;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.MenuItem;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+public class MainViewController implements Initializable {
+   @FXML
+   private VBox window;
+   @FXML
+   private ImageView imgeFundo;
+   @FXML
+   private MenuItem menuItemFornecedor;
+   @FXML
+   private MenuItem menuItemSobre;
+   @FXML
+   private MenuItem menuItemExemplo;
+
+   @FXML
+   public void onFornecedor() {
+      this.carregarTela("/principal/FornecedorView.fxml", "Cadastro de Fornecedor");
+   }
+
+   @FXML
+   public void onSobre() {
+      this.carregarTela("/principal/SobreView.fxml", "Sobre");
+   }
+
+   @FXML
+   public void onExemplo() {
+      this.carregarTela("/principal/TelaExemplo.fxml", "Exemplo");
+   }
+
+   public void initialize(URL url, ResourceBundle rs) {
+   }
+
+   private void carregarTela(String nomeTela, String titulo) {
+      try {
+         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(nomeTela));
+         VBox parent = (VBox)loader.load();
+         Stage stage = new Stage();
+         Scene scene = new Scene(parent);
+         stage.setScene(scene);
+         stage.initModality(Modality.APPLICATION_MODAL);
+         stage.setTitle(titulo);
+         stage.setResizable(false);
+         stage.show();
+      } catch (IOException var7) {
+         var7.printStackTrace();
+      }
+
+   }
+}

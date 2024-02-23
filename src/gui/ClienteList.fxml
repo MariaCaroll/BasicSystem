@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minWidth="-Infinity" prefHeight="736.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="41.0" prefWidth="949.0" text="Cadastro de Clientes">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <GridPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="955.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="81.20001220703125" minWidth="10.0" prefWidth="36.59999389648438" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.39999008178712" minWidth="0.0" prefWidth="18.80001220703125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.80000000000004" minWidth="0.0" prefWidth="55.800018310546875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.59999999999997" minWidth="0.0" prefWidth="105.20001220703126" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.0" minWidth="0.0" prefWidth="27.00000915527346" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.80001220703127" minWidth="0.0" prefWidth="27.800024414062534" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="0.0" prefWidth="19.000024414062466" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.20002441406245" minWidth="10.0" prefWidth="40.60003662109375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.60003662109375" minWidth="10.0" prefWidth="17.399987792968716" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="521.6000244140625" minWidth="0.0" prefWidth="44.00000000000006" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="632.2000122070312" minWidth="7.4000366210937045" prefWidth="38.19997558593752" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="634.1999877929688" minWidth="10.0" prefWidth="43.80002441406248" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.800048828125" minWidth="10.0" prefWidth="33.60002441406243" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.800048828125" minWidth="0.0" prefWidth="76.60001220703123" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.800048828125" minWidth="2.6000488281249545" prefWidth="85.60000000000002" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.800048828125" minWidth="10.0" prefWidth="23.199963378906205" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.800048828125" minWidth="10.0" prefWidth="29.399951171874932" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.800048828125" minWidth="10.0" prefWidth="227.00004882812505" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label maxWidth="-Infinity" minWidth="-Infinity" text="Nome">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="RG" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label minWidth="-Infinity" text="Telefone/Celular" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="CEP" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label maxWidth="-Infinity" minWidth="-Infinity" text="Bairro" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField id="txtCadClienteRG" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField id="txtCadClienteCEP" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField id="txtCadClienteNome" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="205.0" GridPane.columnIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="CPF" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button id="btnCadClientePesquisa" minWidth="-Infinity" mnemonicParsing="false" prefHeight="27.0" prefWidth="38.0" text="P" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField id="txtCadClienteCPF" minWidth="-Infinity" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField id="txtCadClienteUF" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="38.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label maxWidth="-Infinity" minWidth="-Infinity" text="Sobrenome" GridPane.columnIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField id="txtCadClienteBairro" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="206.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label minWidth="-Infinity" text="Logradouro" GridPane.columnIndex="6" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField id="txtCadClienteContato" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="158.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="UF" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Label minWidth="-Infinity" text="Sexo" GridPane.columnIndex="7" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox id="cbCadClienteSexo" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="163.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </ComboBox>
+            <Label maxWidth="-Infinity" minWidth="-Infinity" text="Cidade" GridPane.columnIndex="8" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField id="txtCadClienteSobrenome" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" GridPane.columnIndex="9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField id="txtCadClienteEndereco" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="333.0" GridPane.columnIndex="9" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField id="txtCadClienteCidade" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="430.0" GridPane.columnIndex="10" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="E-mail" GridPane.columnIndex="11" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField id="txtCadClienteEmail" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="351.0" GridPane.columnIndex="12" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label minWidth="-Infinity" text="Cor da Pele" GridPane.columnIndex="13" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox id="cbCadClientePele" minWidth="-Infinity" prefWidth="150.0" GridPane.columnIndex="14" GridPane.rowIndex="2" />
+            <Label text="Dt. Nascimento" GridPane.columnIndex="14" />
+            <TextField id="txtCadClienteNascimento" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="157.0" GridPane.columnIndex="15">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Nº" GridPane.columnIndex="16" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField id="txtCadClienteNumero" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="98.0" GridPane.columnIndex="17" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button id="btnCadClienteLimpar" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="66.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button id="btnCadClienteAdicionar" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="66.0" text="Button" GridPane.columnIndex="17" GridPane.rowIndex="6" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </GridPane>
+      <TableView id="tblCadClientes" prefHeight="368.0" prefWidth="872.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Nome" />
+          <TableColumn prefWidth="75.0" text="Sobrenome" />
+            <TableColumn prefWidth="75.0" text="Dt. Nascimento" />
+            <TableColumn prefWidth="75.0" text="RG" />
+            <TableColumn prefWidth="75.0" text="CPF" />
+            <TableColumn prefWidth="75.0" text="E-mail" />
+            <TableColumn prefWidth="75.0" text="Contato" />
+            <TableColumn prefWidth="75.0" text="Sexo" />
+            <TableColumn prefWidth="75.0" text="Cor da Pele" />
+            <TableColumn prefWidth="75.0" text="CEP" />
+            <TableColumn prefWidth="75.0" text="UF" />
+            <TableColumn prefWidth="75.0" text="Cidade" />
+            <TableColumn prefWidth="75.0" text="Bairro" />
+            <TableColumn prefWidth="75.0" text="Logradouro" />
+            <TableColumn prefWidth="75.0" text="Numero" />
+        </columns>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </TableView>
+   </children>
+</VBox>

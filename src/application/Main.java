@@ -1,25 +1,33 @@
 package application;
-	
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 
+import java.io.IOException;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class Main extends Application {
+	
+	private static Scene loginScene;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/LoginView.fxml"));
+			VBox vBox = loader.load();
+			Scene loginScene = new Scene(vBox);
+			primaryStage.setScene(loginScene);
+			primaryStage.setTitle("Basic System");
 			primaryStage.show();
-		} catch(Exception e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
+	public static Scene getMaScene() {
+		return loginScene;
+	}
 	public static void main(String[] args) {
 		launch(args);
 	}
