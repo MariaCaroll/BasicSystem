@@ -1,0 +1,45 @@
+.buttonPadrao { 
+	    -fx-background-color: #fff;
+    -fx-border-color: #0085CD;
+    -fx-background-radius: 6, 5;
+    -fx-font-size: 14;
+    -fx-text-fill: #0085DC;
+    border-style: outset;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}
+
+.textFieldPadrao {
+	    -fx-border-color: #0085CD;
+	-fx-background-color: #fff;
+	-fx-border-bottoom-color: #0085CD;
+	-fx-font-size: 14;
+	 border-style: outset;
+	-fx-background-radius: 5,4,3,5;
+}
+
+.anchorPaneBorder {
+	-fx-border-color: #0085CD;
+    -fx-background-color: #FFF;
+     border-style: outset;
+    -fx-background-radius: 5,4,3,5;
+}
+
+.lablePadrao{
+	-fx-background-color: #0085CD#0085CD;
+	-fx-text-fill: #0085DC;
+	-fx-font-size: 14;
+	-fx-background-radius: 5,4,3,5;
+}
+.lableErro{
+	-fx-text-fill: #c90202;
+	-fx-font-size: 12;
+	-fx-font-weight: bold;
+}
+
+#table-view .table-column {
+  -fx-alignment: CENTER;
+  -fx-border-color: #0085DC;
+   border-style: outset;
+  -fx-text-fill: #0085DC
+}

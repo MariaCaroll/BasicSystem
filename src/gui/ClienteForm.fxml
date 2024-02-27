@@ -10,14 +10,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <VBox minWidth="-Infinity" prefHeight="736.0" prefWidth="872.0" styleClass="anchorPaneBorder" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ClienteListController">
    <children>
-      <Label alignment="CENTER" prefHeight="41.0" prefWidth="949.0" text="Relação de Clientes">
+      <Label alignment="CENTER" prefHeight="41.0" prefWidth="949.0" text="Cadastro de Clientes">
          <font>
             <Font size="23.0" />
          </font>
@@ -25,31 +24,6 @@
             <Insets left="5.0" />
          </padding>
       </Label>
-      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="870.0" spacing="10.0">
-         <children>
-            <Label text="ID">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <TextField id="txtIDCliente" fx:id="txtIdCliente" editable="false" maxWidth="-Infinity" minWidth="-Infinity" styleClass="textFieldPadrao" />
-            <Label minWidth="-Infinity" text="Criado em">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <TextField minWidth="-Infinity" styleClass="textFieldPadrao" />
-            <Label text="Atualizado em">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <TextField minWidth="-Infinity" styleClass="textFieldPadrao" />
-         </children>
-         <VBox.margin>
-            <Insets top="5.0" />
-         </VBox.margin>
-      </HBox>
       <GridPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="955.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="81.20001220703125" minWidth="10.0" prefWidth="36.59999389648438" />
@@ -121,7 +95,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField id="txtCadClienteRG" fx:id="txtRGCliente" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="174.0" styleClass="textFieldPadrao" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField id="txtCadClienteRG" fx:id="txtRGCliente" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#onRGKeyReloaded" prefHeight="30.0" prefWidth="174.0" styleClass="textFieldPadrao" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
@@ -141,11 +115,11 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button id="btnCadClientePesquisa" fx:id="btnLupa" minWidth="-Infinity" mnemonicParsing="false" prefHeight="27.0" prefWidth="38.0" style="-fx-border-color: none; -fx-background-color: FFF;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <Button id="btnCadClientePesquisa" fx:id="btnLupa" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBtnPesquisarCep" prefHeight="27.0" prefWidth="38.0" style="-fx-border-color: none; -fx-background-color: FFF;" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <TextField id="txtCadClienteCPF" fx:id="txtCpfCliente" minWidth="-Infinity" styleClass="textFieldPadrao" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <TextField id="txtCadClienteCPF" fx:id="txtCpfCliente" minWidth="-Infinity" onKeyReleased="#onCPFKeyReloaded" styleClass="textFieldPadrao" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
@@ -170,7 +144,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField id="txtCadClienteContato" fx:id="txtContato" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="158.0" styleClass="textFieldPadrao" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <TextField id="txtCadClienteContato" fx:id="txtContato" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#onTelPrincipalKeyReloaded" prefHeight="30.0" prefWidth="158.0" styleClass="textFieldPadrao" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="14.0" />
                </font>
@@ -245,7 +219,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button id="btnCadClienteAdicionar" fx:id="btnSalvar" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="63.0" prefWidth="66.0" styleClass="buttonPadrao" text="Button" GridPane.columnIndex="17" GridPane.rowIndex="6">
+            <Button id="btnCadClienteAdicionar" fx:id="btnSalvar" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBtnSalvarAcao" prefHeight="63.0" prefWidth="66.0" styleClass="buttonPadrao" text="Button" GridPane.columnIndex="17" GridPane.rowIndex="6">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
@@ -253,31 +227,17 @@
          <padding>
             <Insets left="10.0" />
          </padding>
-         <VBox.margin>
-            <Insets top="5.0" />
-         </VBox.margin>
       </GridPane>
-      <TableView id="tblCadClientes" fx:id="tblViewCliente" prefHeight="364.0" prefWidth="965.0" stylesheets="@../css/style.css">
+      <TableView id="tblCadClientes" onKeyReleased="#onNascimentoKeyReloaded" prefHeight="368.0" prefWidth="872.0" stylesheets="@../css/style.css">
         <columns>
-            <TableColumn fx:id="tableColumnID" prefWidth="46.39999467134476" text="ID" />
-            <TableColumn fx:id="tableColumnAtivo" prefWidth="46.39999467134476" text="Ativo" />
-          <TableColumn fx:id="tableColumnNome" prefWidth="67.19999313354492" text="Nome" />
-          <TableColumn fx:id="tableColumnSobrenome" prefWidth="108.0" text="Sobrenome" />
-            <TableColumn fx:id="tableColumnDtNascimento" prefWidth="105.59999084472656" text="Dt. Nascimento" />
-            <TableColumn fx:id="tableColumnRG" prefWidth="86.39996337890625" text="RG" />
-            <TableColumn fx:id="tableColumnCPF" prefWidth="72.0" text="CPF" />
-            <TableColumn fx:id="tableColumnEmail" prefWidth="80.00003051757812" text="E-mail" />
-            <TableColumn fx:id="tableColumnContato" prefWidth="80.00003051757812" text="Contato" />
-            <TableColumn fx:id="tableColumnSexo" prefWidth="75.199951171875" text="Sexo" />
-            <TableColumn fx:id="tableColumnCriadoEm" prefWidth="72.7999267578125" text="Criado Em" />
-            <TableColumn fx:id="tableColumnAtualizadoEm" prefWidth="80.00003051757812" text="Atualizado Em" />
-            <TableColumn prefWidth="80.00003051757812" text="Cor da Pele" />
-            <TableColumn fx:id="tableColumnCEP" prefWidth="80.00003051757812" text="Cep" />
-            <TableColumn fx:id="tableColumnUF" prefWidth="80.00003051757812" text="UF" />
-            <TableColumn fx:id="tableColumnCidade" prefWidth="80.00003051757812" text="Cidade" />
-            <TableColumn fx:id="tableColumnBairro" prefWidth="80.00003051757812" text="Bairro" />
-            <TableColumn fx:id="tableColumnLogradouro" prefWidth="80.00003051757812" text="Logradouro" />
-            <TableColumn prefWidth="46.39999467134476" text="Nº" />
+          <TableColumn prefWidth="127.19997864961624" text="Nome" />
+          <TableColumn prefWidth="87.20001220703125" text="Sobrenome" />
+            <TableColumn prefWidth="96.00001525878906" text="Dt. Nascimento" />
+            <TableColumn prefWidth="129.5999755859375" text="RG" />
+            <TableColumn prefWidth="116.00006103515625" text="CPF" />
+            <TableColumn prefWidth="145.5999755859375" text="E-mail" />
+            <TableColumn prefWidth="100.0" text="Contato" />
+            <TableColumn prefWidth="75.199951171875" text="Sexo" />
         </columns>
          <VBox.margin>
             <Insets top="30.0" />

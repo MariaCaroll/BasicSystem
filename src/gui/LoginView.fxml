@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0" prefWidth="434.0" styleClass="anchorPaneBorder" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginViewController">
    <children>
       <Label alignment="CENTER" prefHeight="42.0" prefWidth="402.0" text="Autentique - se" textAlignment="CENTER" />
       <GridPane alignment="CENTER" prefHeight="88.0" prefWidth="376.0">
@@ -32,23 +32,23 @@
          <children>
             <Label text="Usuário" GridPane.columnIndex="1" />
             <Label text="Senha" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField id="txtUsuario" fx:id="txtUsuario" GridPane.columnIndex="2">
+            <TextField id="txtUsuario" fx:id="txtUsuario" styleClass="textFieldPadrao" GridPane.columnIndex="2">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
             </TextField>
             <ImageView id="imgRobo" fitHeight="79.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true" />
-            <PasswordField id="txtSenha" fx:id="passSenha" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="192.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <PasswordField id="txtSenha" fx:id="passSenha" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="192.0" styleClass="textFieldPadrao" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="434.0">
          <children>
-            <Button id="btnEntrar" fx:id="btnEntrar" defaultButton="true" mnemonicParsing="false" onAction="#onBtLogar" text="Entrar" />
+            <Button id="btnEntrar" fx:id="btnEntrar" defaultButton="true" mnemonicParsing="false" onAction="#onBtLogar" styleClass="buttonPadrao" text="Entrar" />
          </children>
          <padding>
             <Insets right="20.0" />
          </padding>
       </HBox>
-      <Label fx:id="lblErroLogin" />
+      <Label fx:id="lblErroLogin" styleClass="lableErro" />
    </children>
 </VBox>
